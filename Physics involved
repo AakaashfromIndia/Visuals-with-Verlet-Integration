@@ -1,0 +1,19 @@
+#Physics concepts involved
+
+1. Verlet Integration
+In classical mechanics, particle motion is governed by Newton’s Second Law as F = ma. But instead of using the explicit Euler method (which updates velocity and then position), this simulation uses Verlet integration, a numerical method ideal for stable, constraint-based simulations like particle systems. It bypasses velocity and directly estimates new position from the current and previous ones, along with acceleration as x(t+1) = 2x-x(t-1)+a∆t^2
+This formulation implicitly handles velocity as v(t) = x(t)+x(t-1), which makes the system more stable over time as it deals with dynamic changes in external factors, especially when energy needs to be conserved approximately. It’s particularly effective in simulations with many interacting particles, as it minimizes error drift.
+
+2. Gravity as a constant force
+All particles in the simulation are subjected to uniform gravitational acceleration downward. This is a constant force field, which causes a continuous downward pull, leading to acceleration of particles toward the bottom of the container. Gravity is added to the acceleration term in the Verlet equation, altering the trajectory of each particle over time. Since the system is 2D, it only affects the vertical component of position.
+
+3. Particle collisions and response
+Each particle is modeled as a soft, circular body. A collision occurs when the distance between two particle centers is less than the sum of their radii. Upon collision, instead of applying impulses or forces, the simulation adjusts the positions of the two particles to eliminate overlap. The amount of overlap is distributed inversely to their masses as
+x_1'=x_1+m_2/(m_1+m_2)𝛿𝑛 ̂ and x_2'=x_2+m_1/(m_1+m_2)𝛿𝑛 ̂
+where 𝛿 is the penetration depth, n is the normalised direction of the displacement. And to simulate imperfect elasticity, this displacement is slightly reduced using a collision elasticity coefficient, which mimics minor energy loss in real world collisions.
+
+4. Boundary collisions and bouncing
+As particles are confined within a box, when a particle's edge crosses the simulation boundary, a similar collision response is applied. The particle is repositioned just inside the wall, and its implied velocity is reflected, often with some energy loss. 
+
+5. Temporal resolution and stability
+To ensure accuracy and realism, each simulation frame is subdivided into multiple physics substeps. This prevents fast moving particles from tunneling through each other without detecting collisions, a common numerical artifact. Simulating in smaller increments ensures better collision detection, more realistic stacking and resting behavior, and high stability under high speed or small radius conditions. 
