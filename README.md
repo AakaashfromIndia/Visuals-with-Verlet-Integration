@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/88977c0e-5991-49c9-81ed-94eb70c0553d)# Visuals-with-Verlet-Integration
+# Visuals-with-Verlet-Integration
 A particle simulation framework using Verlet integration and spatial hashing used to visualize input images using particles
 
 This project simulates 2D particle dynamics using a physics engine inspired by real world kinematics and computational geometry, and can support thousands of particles with efficient real time rendering and accurate physics.
