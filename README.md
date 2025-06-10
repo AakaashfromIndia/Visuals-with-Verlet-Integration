@@ -1,9 +1,14 @@
-# Visuals-with-Verlet-Integration
+![image](https://github.com/user-attachments/assets/88977c0e-5991-49c9-81ed-94eb70c0553d)# Visuals-with-Verlet-Integration
 A particle simulation framework using Verlet integration and spatial hashing used to visualize input images using particles
 
 This project simulates 2D particle dynamics using a physics engine inspired by real world kinematics and computational geometry, and can support thousands of particles with efficient real time rendering and accurate physics.
 
 Particles behave as physical entities within a 2D simulation box, influenced by gravity and mutual collisions. Instead of Euler integration, we use Verlet integration, which provides higher stability and more natural motion (explained in the other explanation focused on physics). In a nutshell, Verlet integration is used for predicting the position (and indirectly the velocity, acceleration, jerk etc.) of a system where external factors are dynamic (if a variable varies with time or varies with some term f(t) which in turn varies with time). This is mostly used in molecular dynamics simulations and other multiparticle systems as the external factors change based on the position of other bodies.
+
+Sample:
+SD: ![image](https://github.com/user-attachments/assets/12d71126-b6d9-4845-ac92-9c8576edabf4)
+
+UHD: ![image](https://github.com/user-attachments/assets/83e181a4-411e-4ebc-a3e3-52b2ca9b35ef)
 
 # Stage wise splitup
 1. We start with determining the particle size and the maximum number of particles based on packing density estimation.
