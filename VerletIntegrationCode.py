@@ -4,7 +4,7 @@ import math
 import random
 from PIL import Image
 
-input_img = "Image.jpg"
+input_img = "filename.jpg"
 width, height = 710, 710
 accelerationDueToGravity = pygame.math.Vector2(0, 981)  # Gravity acceleration in px/s²
 canvasColour = (0, 0, 0)
@@ -29,7 +29,7 @@ PhysicsSubsteps = 16       # Physics accuracy tuning (Increase for more precise 
 resolution_mode = input("Enter resolution mode (SD / HD / UHD): ")
 if resolution_mode == 'UHD':
     minRadius, maxRadius = 1, 8
-    maxParticles = estimate_particle_count(width, height, minRadius, maxRadius, 0.9999)
+    maxParticles = estimate_particle_count(width, height, minRadius, maxRadius, 0.9999) + 250
 elif resolution_mode == 'HD':
     minRadius, maxRadius = 2, 12
     maxParticles = estimate_particle_count(width, height, minRadius, maxRadius)
