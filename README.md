@@ -35,3 +35,5 @@ UHD:
 9. For each particle, we map its final position to the corresponding pixel in the loaded image, update its RGB color values in the CSV and saves updated CSV with final color-mapped particle data.
 10. This is where we begin the visulisation process - we loads simulation window using Pygame
 11. For each frame, we read the next particle from the CSV based on current timestep, reconstructs the particle using stored position, velocity, radius, and RGB color. This simulates motion forward in time using the same physics loop. Here is where we renders the scene where we draw each particle as a colored circle
+
+![image](https://github.com/user-attachments/assets/f7522ab1-b535-4343-813e-b28626ca73c7)
