@@ -9,12 +9,19 @@ Sample:
 
 SD:
 ![image](https://github.com/user-attachments/assets/12d71126-b6d9-4845-ac92-9c8576edabf4)
+![WhatsApp Image 2025-06-26 at 05 25 50_597195aa](https://github.com/user-attachments/assets/231aa00d-cb5a-4e0c-a1a9-1d00f0ce2a0e)
+
 
 HD:
 ![image](https://github.com/user-attachments/assets/0fe1c897-cec4-4d02-ad3f-dd8489c06ef0)
+![WhatsApp Image 2025-06-28 at 01 43 29_763bdf45](https://github.com/user-attachments/assets/f8974f9e-0fa2-4a29-a0e8-463cc6a90749)
+
 
 UHD:
 ![9](https://github.com/user-attachments/assets/4a28359d-502c-4767-a85e-f45f4fe23d56)
+![38](https://github.com/user-attachments/assets/63611931-650f-4d12-bc5b-ff045ba790e4)
+
+
 
 # Stage wise splitup
 1. We start with determining the particle size and the maximum number of particles based on packing density estimation.
